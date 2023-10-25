@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+body::-webkit-scrollbar{
+   display: none;
+ }
+
+.home{
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bg1.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px 0;
+}
+
+.form-container .content{
+    align-items: center;
+    padding-right: 400px;
+    padding-left: 50px;
+    font-size: 20px;
+    top: 20px;
+}
+
+.form-container .content h2{
+    align-items: center;
+}
+
+.form-container .content_l{
+    align-items: center;
+    padding-right: 500px;
+    font-size: 20px;
+}
+
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+}
+
+.container .content{
+   text-align: center;
+}
+
+.container .content h3{
+   font-size: 30px;
+   color:#333;
+}
+
+.container .content h3 span{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:#333;
+}
+
+.container .content h1 span{
+   color:crimson;
+}
+
+.container .content p{
+   font-size: 25px;
+   margin-bottom: 20px;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: rgb(20, 133, 220);
+}
+
+.form-container{
+   z-index: 999;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   padding:20px;
+   background: #d0e7fb87;
+   background-size: cover;
+   background-position: center;
+   padding-right: 10px;
+   padding-top: 90px;
+   padding-bottom: 60px;
+}
+
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: #fff;
+   text-align: center;
+   width: 500px;
+}
+
+.form-container form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:#333;
+}
+
+.form-container form input,
+.form-container form select{
+   width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #eee;
+   border-radius: 5px;
+}
+
+.form-container form select option{
+   background: #fff;
+}
+
+.form-container form .form-btn{
+   background: #d0e7fb;
+   color:rgb(20, 133, 220);
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: rgb(20, 133, 220);
+   color:#fff;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:#333;
+}
+
+.form-container form p a{
+   color:rgb(20, 133, 220);
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: rgb(20, 133, 220);
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgb(20, 133, 220);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header .logo{
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.nav a:hover::after{
+    transform: scaleX(1);
+}
+
+.form-container .contactInfo{
+   background: #2365955a;
+   border-radius: 20px;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   right: 150px;
+   bottom: 10px;
+   width: 2000px;
+}
+
+.form-container .contactInfo .box{
+   position: relative;
+   padding: 20px 0;
+   display: flex;
+   left: 15px;
+}
+
+.form-container .contactInfo .box .icons{
+   min-width: 60px;
+   height: 60px;
+   background: #22465e75;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 22px;
+}
+
+.form-container .contactInfo .box .texts{
+   display: flex;
+   margin-left: 20px;
+   font-size: 16px;
+   color: #000000;
+   flex-direction: column;
+   font-weight: 300;
+}
+
+.form-container .contactInfo .box .texts h3{
+   font-weight: 500;
+   color: #000000;
+}

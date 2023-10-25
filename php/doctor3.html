@@ -1,0 +1,100 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(isset($_SESSION['user_name'])){
+   header('location:login_form.php');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="patient.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <section id="menu">
+        <div class="logo">
+            <img src="css/logo.jpeg" alt="LOGO">
+            <h2>SmartHealth</h2>
+        </div>
+
+        <div class="items">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i><a href="user_page.php">Doctors</a></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i><a href="store_user.php">Store</a></li>
+            <li><i class="fa fa-sign-out" aria-hidden="true"></i><a href="logout.php">Sign Out</a></li>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fas fa-bars"></i>
+                </div>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="css/user.jpg" alt="">
+            </div>
+        </div>
+        <h3 class="i-name">
+            Doctors > Doctor 3      </h3>
+        <div class="values">
+            <div class="val-box">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <div><h3>Doctor 3</h3><span>+91 9876543210</span></div>
+            </div>
+        </div>
+
+        <dir class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Qualification</td>
+                        <td>Patients Attended</td>
+                        <td>Specialization</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>Qualification</h5>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                           <h5>53</h5>
+                        </td>
+                        <td class="edit">Ophthalmology</td>
+                    </tr>
+                </tbody>
+            </table>
+        </dir>
+    </section>
+
+    <script>
+        $('#menu-btn').click(function(){
+            $('#menu').toggleClass("active");
+        })
+    </script>
+
+
+</body>
+</html>
